@@ -6,12 +6,16 @@
 
 {% block body %}
     <div class="container max-w-7xl mx-auto">
-                <div class="flex flex-col items-center mt-6">
-                    <h1 class = "text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
-                    <div class="flex mt-10">
-                        {{ email }}
-                    </div>
-                </div>
+        <div class="flex flex-col items-center mt-6">
+            <a href="/profileQ">
+                <h1 class="text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
+
+            </a>
+            <div class="flex mt-10">
+                {{ email }}
+            </div>
+        </div>
+
         <ul role="list" class="divide-y divide-gray-400">
 
             {%for i in range(0, num_projects)%}
@@ -49,9 +53,9 @@
 
         </ul>
     </div>
-    <div class="mx-auto  mt-10 max-w-xl sm:mt-20">
+    <div class="mx-auto mt-20 max-w-xl sm:mt-20">
                 <a href="/logout"
                     class="block w-full rounded-md bg-gray-600 mt-5 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
                     Logout</a>
-    </div>
+    </div> 
 {% endblock %}

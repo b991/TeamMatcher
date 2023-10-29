@@ -160,6 +160,36 @@ def logout():
     logout_user()
     return redirect('/login')
 
+@match_app.route("/profileQ", methods=['GET'])
+def profileQ():
+    user = current_user
+    num_projects = 0
+    ids = []
+    names = []
+    descriptions = []
+    creators = []
+    completes = []
+    if current_user.projects:
+        project_ids = [int(id) for id in current_user.projects.split()]
+        for id in project_ids:
+            project = Project.query.filter_by(id=id).first()
+            num_projects += 1
+            ids.append(project.id)
+            names.append(project.name)
+            descriptions.append("{}...".format(project.description[:(min(300, len(project.description)))]))
+            completes.append(project.complete)
+    return render_template("profileQ.html",
+                           first_name=user.first_name,
+                           last_name=user.last_name,
+                           email=user.email,
+                           num_projects=num_projects,
+                           ids=ids,
+                           names=names,
+                           descriptions=descriptions,
+                           completes=completes)
+
+
+
 @match_app.route('/', methods=['GET'])
 def index():
     return redirect("/browse")
