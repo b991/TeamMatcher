@@ -38,6 +38,25 @@ def register():
         return "register success"
     return render_template("register.html")
 
+@match_app.route('/register-q1', methods=['GET', 'POST'])
+def registerQuestion1():
+    return render_template("registerQuestion1.html")
+
+@match_app.route('/register-q2', methods=['GET', 'POST'])
+def registerQuestion2():
+    return render_template("registerQuestion2.html")
+
+@match_app.route('/viewproject', methods=['GET'])
+def project():
+    return render_template("projectInfo.html")
+
+@match_app.route('/post', methods=['GET'])
+def post():
+    return render_template("postProject.html")
+
+@match_app.route('/profile', methods=['GET'])
+def profile():
+    return render_template("profile.html")
 
 @match_app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -58,12 +77,12 @@ def logout():
 
 @match_app.route('/', methods=['GET'])
 def index():
-    return "Team Matcher"
+    return render_template("home.html")
 
 @match_app.route('/browse', methods=['GET'])
 @login_required
 def browse():
-    return "browse projects"
+    return render_template("home.html")
 
 @login_manager.user_loader
 def load_user(user_id):
