@@ -36,7 +36,7 @@ def register():
         user_db.session.add(user)
         user_db.session.commit()
         return "register success"
-    return "register page"
+    return render_template("register.html")
 
 
 @match_app.route('/login', methods=['GET', 'POST'])
@@ -48,7 +48,7 @@ def login():
             return "login success"
         else:
             return "login failed"
-    return "login page"
+    return render_template("login.html")
 
 @match_app.route("/logout", methods=['GET'])
 @login_required
@@ -71,4 +71,4 @@ def load_user(user_id):
 
 
 if __name__ == '__main__':
-    match_app.run()
+    match_app.run(debug=True)
