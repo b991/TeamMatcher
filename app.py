@@ -21,6 +21,17 @@ class User(UserMixin, db.Model):
     first_name = db.Column(db.String, nullable=True)
     last_name = db.Column(db.String, nullable=True)
     projects = db.Column(db.String, nullable=True)
+    goal = db.Column(db.String, nullable=True)
+    fear = db.Column(db.String, nullable=True)
+    weekend = db.Column(db.String, nullable=True)
+    expertise = db.Column(db.String, nullable=True)
+    highlight = db.Column(db.String, nullable=True)
+    lookfor = db.Column(db.String, nullable=True)
+    skill = db.Column(db.String, nullable=True)
+    connect = db.Column(db.String, nullable=True)
+    weakness = db.Column(db.String, nullable=True)
+    hobby = db.Column(db.String, nullable=True)
+
 
 class Project(db.Model):
     __tablename__ = 'project'
@@ -61,7 +72,7 @@ def registerQuestion():
         user.first_name = first_name
         user.last_name = last_name
         db.session.commit()
-        return redirect("/post")
+        return redirect("/profileQ")
     return render_template("registerQuestion.html")
 
 @match_app.route('/project', methods=['GET'])
@@ -75,7 +86,8 @@ def project():
                            requirement=project.requirement,
                            description=project.description,
                            created_by="{} {}".format(creator.first_name, creator.last_name),
-                           email=creator.email
+                           email=creator.email,
+                           created_by_id=project.created_by
                            )
 
 @match_app.route('/post', methods=['GET', 'POST'])
@@ -115,14 +127,18 @@ def complete():
 @login_required
 def profile():
     user = current_user
+    id = request.args.get('id')
+    if id is not None:
+        user = User.query.filter_by(id=id).first()
+        if user is None:
+            user = user
     num_projects = 0
     ids = []
     names = []
     descriptions = []
-    creators = []
     completes = []
-    if current_user.projects:
-        project_ids = [int(id) for id in current_user.projects.split()]
+    if user.projects:
+        project_ids = [int(id) for id in user.projects.split()]
         for id in project_ids:
             project = Project.query.filter_by(id=id).first()
             num_projects += 1
@@ -131,14 +147,26 @@ def profile():
             descriptions.append("{}...".format(project.description[:(min(300, len(project.description)))]))
             completes.append(project.complete)
     return render_template("profile.html",
+                           me=(user.id == current_user.id),
                            first_name=user.first_name,
                            last_name=user.last_name,
                            email=user.email,
+                           goal=user.goal if user.goal is not None else " ",
+                           fear=user.fear if user.fear is not None else " ",
+                           weekend=user.weekend if user.weekend is not None else " ",
+                           expertise=user.expertise if user.expertise is not None else " ",
+                           highlight=user.highlight if user.highlight is not None else " ",
+                           lookfor=user.lookfor if user.lookfor is not None else " ",
+                           skill=user.skill if user.skill is not None else " ",
+                           connect=user.connect if user.connect is not None else " ",
+                           weakness=user.weakness if user.weakness is not None else " ",
+                           hobby=user.hobby if user.hobby is not None else " ",
                            num_projects=num_projects,
                            ids=ids,
                            names=names,
                            descriptions=descriptions,
-                           completes=completes)
+                           completes=completes
+                           )
 
 @match_app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -160,35 +188,31 @@ def logout():
     logout_user()
     return redirect('/login')
 
-@match_app.route("/profileQ", methods=['GET'])
+@match_app.route("/profileQ", methods=['GET', 'POST'])
+@login_required
 def profileQ():
     user = current_user
-    num_projects = 0
-    ids = []
-    names = []
-    descriptions = []
-    creators = []
-    completes = []
-    if current_user.projects:
-        project_ids = [int(id) for id in current_user.projects.split()]
-        for id in project_ids:
-            project = Project.query.filter_by(id=id).first()
-            num_projects += 1
-            ids.append(project.id)
-            names.append(project.name)
-            descriptions.append("{}...".format(project.description[:(min(300, len(project.description)))]))
-            completes.append(project.complete)
+    if request.method == "POST":
+        fields = ["goal", "fear", "weekend", "expertise", "highlight",
+                  "lookfor", "skill", "connect", "weakness", "hobby"]
+        for field in fields:
+            val = request.form.get(field)
+            if val is not None and len(val.split()) != 0:
+                setattr(user, field, val)
+        db.session.commit()
+        return redirect("/profile")
     return render_template("profileQ.html",
-                           first_name=user.first_name,
-                           last_name=user.last_name,
-                           email=user.email,
-                           num_projects=num_projects,
-                           ids=ids,
-                           names=names,
-                           descriptions=descriptions,
-                           completes=completes)
-
-
+                           goal=user.goal if user.goal is not None else " ",
+                           fear=user.fear if user.fear is not None else " ",
+                           weekend=user.weekend if user.weekend is not None else " ",
+                           expertise=user.expertise if user.expertise is not None else " ",
+                           highlight=user.highlight if user.highlight is not None else " ",
+                           lookfor=user.lookfor if user.lookfor is not None else " ",
+                           skill=user.skill if user.skill is not None else " ",
+                           connect=user.connect if user.connect is not None else " ",
+                           weakness=user.weakness if user.weakness is not None else " ",
+                           hobby=user.hobby if user.hobby is not None else " "
+                           )
 
 @match_app.route('/', methods=['GET'])
 def index():

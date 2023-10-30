@@ -1,95 +1,92 @@
 {% extends 'template.html' %}
 
 {% block title %}
-Team Matcher | My Profile
+Team Matcher | Profile Questions
 {% endblock %}
 
 {% block body %}
 <div class="container max-w-7xl mx-auto">
     <div class="flex flex-col items-center mt-6">
-        <h1 class="text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
-        <div class="flex mt-10">
-            {{ email }}
-        </div>
+        <h1 class="text-3xl mt-10">More about Me</h1>
     </div>
     <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">This year, I really
+                <label for="goal" class="block text-sm font-semibold leading-6 text-gray-900">This year, I really
                     want to:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="goal" id="goal" placeholder="{{ goal }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">My most irrational
+                <label for="fear" class="block text-sm font-semibold leading-6 text-gray-900">My most irrational
                     fear:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="fear" name="fear" id="fear" placeholder="{{ fear }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Typical Sunday:</label>
+                <label for="weekend" class="block text-sm font-semibold leading-6 text-gray-900">Typical Sunday:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="weekend" id="weekend" placeholder="{{ weekend }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">My freind ask me for
+                <label for="expertise" class="block text-sm font-semibold leading-6 text-gray-900">My freind ask me for
                     advice about:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="expertise" id="expertise" placeholder="{{ expertise }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">The one thing you
+                <label for="highlight" class="block text-sm font-semibold leading-6 text-gray-900">The one thing you
                     should know about me is:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="highlight" id="highlight" placeholder="{{ highlight }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">I'm looking
+                <label for="lookfor" class="block text-sm font-semibold leading-6 text-gray-900">I'm looking
                     for:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="lookfor" id="lookfor" placeholder="{{ lookfor }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">I bet you
+                <label for="skill" class="block text-sm font-semibold leading-6 text-gray-900">I bet you
                     can't:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="skill" id="skill" placeholder="{{ skill }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">You should leave a
+                <label for="connect" class="block text-sm font-semibold leading-6 text-gray-900">You should leave a
                     comment if:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="connect" id="connect" placeholder="{{ connect }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Don't hate me if
+                <label for="weakness" class="block text-sm font-semibold leading-6 text-gray-900">Don't hate me if
                     I:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="weakness" id="weakness" placeholder="{{ weakness }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">To me, relaxation
+                <label for="hobby" class="block text-sm font-semibold leading-6 text-gray-900">To me, relaxation
                     is:</label>
                 <div class="mt-2.5">
-                    <input type="text" name="company" id="company" autocomplete="organization"
+                    <input type="text" name="hobby" id="hobby" placeholder="{{ hobby }}"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
