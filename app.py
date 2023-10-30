@@ -59,11 +59,10 @@ def register():
         user = User(email=email, pwd=pwd_hashed, first_name=None, last_name=None)
         db.session.add(user)
         db.session.commit()
-        return redirect("/login")
+        return redirect("/register-q")
     return render_template("register.html")
 
 @match_app.route('/register-q', methods=['GET', 'POST'])
-@login_required
 def registerQuestion():
     if request.method == "POST":
         first_name = request.form.get("first-name")
