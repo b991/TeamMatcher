@@ -59,10 +59,11 @@ def register():
         user = User(email=email, pwd=pwd_hashed, first_name=None, last_name=None)
         db.session.add(user)
         db.session.commit()
-        return redirect("/register-q")
+        return redirect("/login")
     return render_template("register.html")
 
 @match_app.route('/register-q', methods=['GET', 'POST'])
+@login_required
 def registerQuestion():
     if request.method == "POST":
         first_name = request.form.get("first-name")
@@ -131,6 +132,33 @@ def profile():
         user = User.query.filter_by(id=id).first()
         if user is None:
             user = user
+    return render_template("profile.html",
+                           me=(user.id == current_user.id),
+                           first_name=user.first_name,
+                           last_name=user.last_name,
+                           email=user.email,
+                           goal=user.goal if user.goal is not None else " ",
+                           fear=user.fear if user.fear is not None else " ",
+                           weekend=user.weekend if user.weekend is not None else " ",
+                           expertise=user.expertise if user.expertise is not None else " ",
+                           highlight=user.highlight if user.highlight is not None else " ",
+                           lookfor=user.lookfor if user.lookfor is not None else " ",
+                           skill=user.skill if user.skill is not None else " ",
+                           connect=user.connect if user.connect is not None else " ",
+                           weakness=user.weakness if user.weakness is not None else " ",
+                           hobby=user.hobby if user.hobby is not None else " ",
+
+                           )
+
+@match_app.route('/profileProjects', methods=['GET'])
+@login_required
+def profileprojects():
+    user = current_user
+    id = request.args.get('id')
+    if id is not None:
+        user = User.query.filter_by(id=id).first()
+        if user is None:
+            user = user
     num_projects = 0
     ids = []
     names = []
@@ -145,7 +173,7 @@ def profile():
             names.append(project.name)
             descriptions.append("{}...".format(project.description[:(min(300, len(project.description)))]))
             completes.append(project.complete)
-    return render_template("profile.html",
+    return render_template("profileProjects.html",
                            me=(user.id == current_user.id),
                            first_name=user.first_name,
                            last_name=user.last_name,
