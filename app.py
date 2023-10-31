@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,flash
 from flask import request, render_template, redirect
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 import bcrypt
@@ -59,6 +59,7 @@ def register():
         user = User(email=email, pwd=pwd_hashed, first_name=None, last_name=None)
         db.session.add(user)
         db.session.commit()
+        flash('You are successfully registered! Now try logging in : )')
         return redirect("/login")
     return render_template("register.html")
 
@@ -212,6 +213,13 @@ def login():
 @match_app.route("/logout", methods=['GET'])
 @login_required
 def logout():
+    user = current_user
+    id = request.args.get('id')
+    if id is not None:
+        user = User.query.filter_by(id=id).first()
+        if user is None:
+            user = user
+    flash("You have been logged out,{name}!".format(name=user.first_name))
     logout_user()
     return redirect('/login')
 
