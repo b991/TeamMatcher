@@ -21,6 +21,8 @@ class User(UserMixin, db.Model):
     first_name = db.Column(db.String, nullable=True)
     last_name = db.Column(db.String, nullable=True)
     projects = db.Column(db.String, nullable=True)
+    fav_class = db.Column(db.String, nullable=True)
+    class_taken = db.Column(db.String, nullable=True)
     goal = db.Column(db.String, nullable=True)
     fear = db.Column(db.String, nullable=True)
     weekend = db.Column(db.String, nullable=True)
@@ -31,6 +33,7 @@ class User(UserMixin, db.Model):
     connect = db.Column(db.String, nullable=True)
     weakness = db.Column(db.String, nullable=True)
     hobby = db.Column(db.String, nullable=True)
+
 
 
 class Project(db.Model):
@@ -69,9 +72,13 @@ def registerQuestion():
     if request.method == "POST":
         first_name = request.form.get("first-name")
         last_name = request.form.get("last-name")
+        fav_class = request.form.get("fav_class")
+        class_taken = request.form.get("class_taken")
         user = current_user
         user.first_name = first_name
         user.last_name = last_name
+        setattr(user, "fav_class", fav_class)
+        setattr(user, "class_taken", class_taken)
         db.session.commit()
         return redirect("/profileQ")
     return render_template("registerQuestion.html")
@@ -138,6 +145,8 @@ def profile():
                            first_name=user.first_name,
                            last_name=user.last_name,
                            email=user.email,
+                           fav_class=user.fav_class if user.fav_class is not None else " ",
+                           class_taken=user.class_taken if user.class_taken is not None else " ",
                            goal=user.goal if user.goal is not None else " ",
                            fear=user.fear if user.fear is not None else " ",
                            weekend=user.weekend if user.weekend is not None else " ",
@@ -179,16 +188,6 @@ def profileprojects():
                            first_name=user.first_name,
                            last_name=user.last_name,
                            email=user.email,
-                           goal=user.goal if user.goal is not None else " ",
-                           fear=user.fear if user.fear is not None else " ",
-                           weekend=user.weekend if user.weekend is not None else " ",
-                           expertise=user.expertise if user.expertise is not None else " ",
-                           highlight=user.highlight if user.highlight is not None else " ",
-                           lookfor=user.lookfor if user.lookfor is not None else " ",
-                           skill=user.skill if user.skill is not None else " ",
-                           connect=user.connect if user.connect is not None else " ",
-                           weakness=user.weakness if user.weakness is not None else " ",
-                           hobby=user.hobby if user.hobby is not None else " ",
                            num_projects=num_projects,
                            ids=ids,
                            names=names,
@@ -262,7 +261,6 @@ def browse():
     names = []
     descriptions = []
     creators = []
-    completes = []
     for project in projects:
         if project.complete != 1:
             num_projects += 1

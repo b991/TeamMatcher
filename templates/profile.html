@@ -9,79 +9,52 @@
 {% block body %}
     <div class="container max-w-7xl mx-auto">
        <div class="flex flex-col items-center mt-6">
-           <a href="/profileQ">
-               <h1 class="text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
-           </a>
-           <div class="flex mt-5">
+           <h1 class="text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
+
+           <a href="/profileProjects" class="my-5 shadow-lg bg-green-100 text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">View My Projects</a>
+
+           <div class="flex">
                {{ email }}
            </div>
-           <div class = "container  max-w-xl my-5 shadow-lg border border-gray-300 p-5 rounded-lg border-gray-100">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available</div>
-           <a href="/profileProjects" class="my-5 shadow-lg bg-green-100 text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">View My Projects</a>
-       </div>
-           <li class="flex items-center justify-between gap-x-6 py-5">
-               <div class="min-w-0">
-                   <div class="flex items-start gap-x-3 ">
-                       <p class="text-sm font-semibold leading-6 text-gray-900"> Classes I have taken: </p>
-                   </div>
-                   <div class="flex items-start gap-x-3 ">
-                       <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
-                           {{ goal }}
-                       </p>
-                   </div>
-               </div>
-           </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
-               <div class="min-w-0">
-                   <div class="flex items-start gap-x-3">
-                       <p class="text-sm font-semibold leading-6 text-gray-900"> My favorite class: </p>
-                   </div>
-                   <div class="flex items-start gap-x-3">
-                       <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
-                           {{ goal }}
-                       </p>
-                   </div>
-               </div>
-           </li>
 
-
-           <li class="flex items-center justify-between gap-x-6 py-5">
-               <div class="min-w-0">
-                   <div class="flex items-start gap-x-3">
-                       <p class="text-sm font-semibold leading-6 text-gray-900">My most irrational fear:</p>
-                   </div>
-                   <div class="flex items-start gap-x-3">
-                       <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
-                           {{ fear }}
-                       </p>
-                   </div>
+           <div class = "container max-w-xl ">
+               <div class="mt-5 sm:col-span-2">
+                    <label for="fav_class" class="block text-sm font-semibold leading-6 text-gray-900">Favorite class at Cal so far: </label>
+                    <div class="mt-2.5 shadow-lg  p-5 rounded-lg border-gray-100">
+                      {{ fav_class }}
+                </div>
                </div>
-           </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
-               <div class="min-w-0">
-                   <div class="flex items-start gap-x-3">
-                       <p class="text-sm font-semibold leading-6 text-gray-900">Typical Sunday:</p>
-                   </div>
-                   <div class="flex items-start gap-x-3">
-                       <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
-                           {{ weekend }}
-                       </p>
-                   </div>
+               <div class="mt-5 sm:col-span-2 mb-5 ">
+                    <label for="class_taken" class="block text-sm font-semibold leading-6 text-gray-900">Classes I have taken:</label>
+                    <div class="mt-2.5 shadow-lg p-5 rounded-lg border-gray-100">
+                      {{ class_taken }}
+                </div>
                </div>
-           </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
-               <div class="min-w-0">
-                   <div class="flex items-start gap-x-3">
-                       <p class="text-sm font-semibold leading-6 text-gray-900">My freind ask me for
-               advice about:</p>
+            <li class="flex items-center justify-between gap-x-6 py-5">
+                   <div class="min-w-0">
+                       <div class="flex items-start gap-x-3">
+                           <p class="text-sm font-semibold leading-6 text-gray-900">My most irrational fear:</p>
+                       </div>
+                       <div class="flex items-start gap-x-3">
+                           <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
+                               {{ fear }}
+                           </p>
+                       </div>
                    </div>
-                   <div class="flex items-start gap-x-3">
-                       <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
-                           {{ expertise }}
-                       </p>
+               </li>
+            <li class="flex items-center justify-between gap-x-6 py-5">
+                   <div class="min-w-0">
+                       <div class="flex items-start gap-x-3">
+                           <p class="text-sm font-semibold leading-6 text-gray-900">Typical Sunday:</p>
+                       </div>
+                       <div class="flex items-start gap-x-3">
+                           <p class="mt-2 flex items-center gap-x-2 leading-5  text-sm text-gray-500">
+                               {{ weekend }}
+                           </p>
+                       </div>
                    </div>
-               </div>
-           </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
+               </li>
+            <li class="flex items-center justify-between gap-x-6 py-5">
                <div class="min-w-0">
                    <div class="flex items-start gap-x-3">
                        <p class="text-sm font-semibold leading-6 text-gray-900">The one thing you
@@ -94,7 +67,7 @@
                    </div>
                </div>
            </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
+            <li class="flex items-center justify-between gap-x-6 py-5">
                <div class="min-w-0">
                    <div class="flex items-start gap-x-3">
                        <p class="text-sm font-semibold leading-6 text-gray-900">I'm looking
@@ -107,7 +80,7 @@
                    </div>
                </div>
            </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
+            <li class="flex items-center justify-between gap-x-6 py-5">
                    <div class="min-w-0">
                        <div class="flex items-start gap-x-3">
                            <p class="text-sm font-semibold leading-6 text-gray-900">I bet you can't:</p>
@@ -119,7 +92,7 @@
                        </div>
                    </div>
                </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
+            <li class="flex items-center justify-between gap-x-6 py-5">
                    <div class="min-w-0">
                        <div class="flex items-start gap-x-3">
                            <p class="text-sm font-semibold leading-6 text-gray-900">You should leave a comment if:</p>
@@ -131,7 +104,7 @@
                        </div>
                    </div>
            </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
+            <li class="flex items-center justify-between gap-x-6 py-5">
                    <div class="min-w-0">
                        <div class="flex items-start gap-x-3">
                            <p class="text-sm font-semibold leading-6 text-gray-900">Don't hate me if
@@ -144,7 +117,7 @@
                        </div>
                    </div>
            </li>
-           <li class="flex items-center justify-between gap-x-6 py-5">
+            <li class="flex items-center justify-between gap-x-6 py-5">
                    <div class="min-w-0">
                        <div class="flex items-start gap-x-3">
                            <p class="text-sm font-semibold leading-6 text-gray-900">To me, relaxation
@@ -157,6 +130,9 @@
                        </div>
                    </div>
            </li>
+           </div>
+       </div>
+
    </div>
     {% if me == True %}
         <div class="mx-auto mt-20 max-w-xl sm:mt-20 mb-20">
