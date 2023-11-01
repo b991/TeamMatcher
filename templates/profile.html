@@ -10,9 +10,7 @@
     <div class="container max-w-7xl mx-auto">
        <div class="flex flex-col items-center mt-6">
            <h1 class="text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
-
-           <a href="/profileProjects" class="my-5 shadow-lg bg-green-100 text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">View My Projects</a>
-
+           <a href="/profileProjects?id={{ user_id }}" class="my-5 shadow-lg bg-green-100 text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">View {{first_name}}'s Projects</a>
            <div class="flex">
                {{ email }}
            </div>

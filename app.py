@@ -34,8 +34,6 @@ class User(UserMixin, db.Model):
     weakness = db.Column(db.String, nullable=True)
     hobby = db.Column(db.String, nullable=True)
 
-
-
 class Project(db.Model):
     __tablename__ = 'project'
 
@@ -45,7 +43,6 @@ class Project(db.Model):
     description = db.Column(db.String, nullable=False)
     created_by = db.Column(db.Integer, nullable=False)
     complete = db.Column(db.Integer, nullable=False)
-
 
 with match_app.app_context():
     db.create_all()
@@ -142,6 +139,7 @@ def profile():
             user = user
     return render_template("profile.html",
                            me=(user.id == current_user.id),
+                           user_id=user.id,
                            first_name=user.first_name,
                            last_name=user.last_name,
                            email=user.email,
@@ -157,7 +155,6 @@ def profile():
                            connect=user.connect if user.connect is not None else " ",
                            weakness=user.weakness if user.weakness is not None else " ",
                            hobby=user.hobby if user.hobby is not None else " ",
-
                            )
 
 @match_app.route('/profileProjects', methods=['GET'])
@@ -185,6 +182,7 @@ def profileprojects():
             completes.append(project.complete)
     return render_template("profileProjects.html",
                            me=(user.id == current_user.id),
+                           user_id = user.id,
                            first_name=user.first_name,
                            last_name=user.last_name,
                            email=user.email,
