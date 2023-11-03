@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Matcher | Login</title>
+    <link href="/static/css/output.css" rel="stylesheet">
+    <link href="/static/css/costum.css" rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3Ctext%20x='0'%20y='14'%3E🎉%3C/text%3E%3C/svg%3E"
+        type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        aria-hidden="true">
+        <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+    <!--
+    This example requires updating your template:
+
+    ```
+    <html class="h-full bg-gray-50">
+    <body class="h-full">
+    ```
+    -->
+    <div>
+        <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+        <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
+            <!--
+        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+
+        Entering: "transition-opacity ease-linear duration-300"
+            From: "opacity-0"
+            To: "opacity-100"
+        Leaving: "transition-opacity ease-linear duration-300"
+            From: "opacity-100"
+            To: "opacity-0"
+        -->
+            <div class="fixed inset-0 bg-gray-900/80"></div>
+
+            <div class="fixed inset-0 flex">
+                <!--
+            Off-canvas menu, show/hide based on off-canvas menu state.
+
+            Entering: "transition ease-in-out duration-300 transform"
+            From: "-translate-x-full"
+            To: "translate-x-0"
+            Leaving: "transition ease-in-out duration-300 transform"
+            From: "translate-x-0"
+            To: "-translate-x-full"
+        -->
+                <div class="relative mr-16 flex w-full max-w-xs flex-1">
+                    <!--
+            Close button, show/hide based on off-canvas menu state.
+
+            Entering: "ease-in-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+            Leaving: "ease-in-out duration-300"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+                    <div class="absolute left-full top-0 flex w-16 justify-center pt-5">
+                        <button type="button" class="-m-2.5 p-2.5">
+                            <span class="sr-only">Close sidebar</span>
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Sidebar component, swap this element with another sidebar if you like -->
+                    <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-50 px-6 pb-2">
+                        <div class="flex h-16 shrink-0 items-center justify-center">
+                            <a href="/dashboard" class="font-bold text-gray-500 shadow-lg py-2 px-3 rounded-lg">Team Matcher</a>
+                        </div>
+                        <nav class="flex flex-1 flex-col">
+                            <ul role="list" class="flex flex-1 flex-col gap-y-1 px-4">
+                                <li class="flex flex-col items-center self-center">
+                                    <div class="w-32 h-32 rounded-lg bg-pink-200"></div>
+                                    <p class="text-lg text-center font-semibold text-gray-600 mt-3">Welcome, Beiqi Wang</p>
+                                </li>
+                                <li class="mt-7">
+                                    <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                        <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill='none' viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                        </svg>
+                                        My Profile
+                                    </a>                                    
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                        <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                                        </svg>
+                                        Projects
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                        <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                                        </svg>
+                                        New Post
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="self-center text-gray-600 bg-gray-300 py-2 px-3 rounded-lg hover:text-white hover:bg-gray-400 mb-5">Log Out</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Static sidebar for desktop -->
+        <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+            <!-- Sidebar component, swap this element with another sidebar if you like -->
+            <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 shadow-xl px-6">
+                <div class="flex h-16 shrink-0 items-center justify-center">
+                    <a href="/dashboard" class="font-bold text-gray-500 shadow-lg py-2 px-3 rounded-lg">Team Matcher</a>
+                </div>
+                <nav class="flex flex-1 flex-col ">
+                    <ul role="list" class="flex flex-1 flex-col gap-y-1 px-4">
+                        <li class="flex flex-col items-center self-center">
+                            <div class="w-32 h-32 rounded-lg bg-pink-200"></div>
+                            <p class="text-lg text-center font-semibold text-gray-600 mt-3">Welcome, Beiqi Wang</p>
+                        </li>
+                        <li class="mt-7">
+                            <a href="#"
+                                class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill='none' viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                My Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                                </svg>
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                                <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                                </svg>
+                                New Post
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="self-center text-gray-600 bg-gray-300 py-2 px-3 rounded-lg hover:text-white hover:bg-gray-400 mb-5">Log
+                        Out</a>
+                </nav>
+            </div>
+        </div>
+
+
+        <main class="py-10 lg:pl-72">
+            <div class="px-4 sm:px-6 lg:px-8">
+                <!-- Your content -->
+                <div class = "container mx-auto max-w-7xl">
+                    <!-- search bar -->
+                    <div class = "flex flex-grow justify-center my-5">
+                    <div class="w-full sm:max-w-xs">
+                        <label for="search" class="sr-only">Search</label>
+                        <div class="relative">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <input id="search" name="search"
+                                class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                placeholder="Search class..." type="search">
+                        </div>
+                    </div>                        
+                    </div>
+
+                    <!-- End search bar -->
+                    <div>
+                        <h2 class="text-sm font-medium text-gray-500">2024 Fall Classes</h2>
+                        <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+                            <li class="col-span-1 flex rounded-md shadow-sm">
+                                <div
+                                    class="flex w-2 flex-shrink-0 items-center justify-center bg-pink-600 rounded-l-md text-sm font-medium text-white">
+                                </div>
+                                <div
+                                    class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                    <div class="flex-1 truncate px-4 py-2 text-sm">
+                                        <a href="/" class="font-medium text-gray-900 hover:text-gray-600">CS 170</a>
+                                        <p class="text-gray-500">60 Members</p>
+                                    </div>
+                                    <div class="flex-shrink-0 pr-2">
+                                        <button type="button"
+                                            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            <span class="sr-only">Open options</span>
+                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-span-1 flex rounded-md shadow-sm">
+                                <div
+                                    class="flex w-2 flex-shrink-0 items-center justify-center bg-purple-600 rounded-l-md text-sm font-medium text-white">
+                                </div>
+                                <div
+                                    class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                    <div class="flex-1 truncate px-4 py-2 text-sm">
+                                        <a href="/" class="font-medium text-gray-900 hover:text-gray-600">Component Design</a>
+                                        <p class="text-gray-500">12 Members</p>
+                                    </div>
+                                    <div class="flex-shrink-0 pr-2">
+                                        <button type="button"
+                                            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            <span class="sr-only">Open options</span>
+                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-span-1 flex rounded-md shadow-sm">
+                                <div
+                                    class="flex w-2 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">
+                                </div>
+                                <div
+                                    class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                    <div class="flex-1 truncate px-4 py-2 text-sm">
+                                        <a href="/" class="font-medium text-gray-900 hover:text-gray-600">CS 186</a>
+                                        <p class="text-gray-500">90 Members</p>
+                                    </div>
+                                    <div class="flex-shrink-0 pr-2">
+                                        <button type="button"
+                                            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            <span class="sr-only">Open options</span>
+                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-span-1 flex rounded-md shadow-sm">
+                                <div
+                                    class="flex w-2 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">
+                                </div>
+                                <div
+                                    class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                    <div class="flex-1 truncate px-4 py-2 text-sm">
+                                        <a href="/" class="font-medium text-gray-900 hover:text-gray-600">React Components</a>
+                                        <p class="text-gray-500">10 Members</p>
+                                    </div>
+                                    <div class="flex-shrink-0 pr-2">
+                                        <button type="button"
+                                            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            <span class="sr-only">Open options</span>
+                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end content here -->
+
+
+            </div>
+        </main>
+    </div>
+
+
+
+</body>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Matcher Grid View</title>
+    <link href="/static/css/output.css" rel="stylesheet">
+    <link href="/static/css/costum.css" rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3Ctext%20x='0'%20y='14'%3E🎉%3C/text%3E%3C/svg%3E"
+        type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        aria-hidden="true">
+        <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+    <nav class="bg-transparent shadow-lg pb-5">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8 ">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex items-center justify-center ">
+                    <div class="flex space-x-4 items-center">
+                        <a href="/dashboard"
+                            class="rounded-md shadow-xl text-sm font-semibold text-gray-400 text-center px-3 py-2">Team
+                            Matcher</a>
+                        <a href="/browse"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Browse</a>
+                        <a href="/post"
+                            class="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Post</a>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <a href="/profile"
+                        class="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Me</a>
+                </div>
+            </div>
+            <!-- Partner/team choice starts here   -->
+            <div>
+                <ul role="list" class=" flex justify-center space-x-5">
+                    <li class="col-span-1 flex rounded-md shadow-sm">
+                        <div class="flex items-center justify-between truncate rounded-lg border-gray-200 bg-gray-50 hover:bg-gray-300">
+                            <div class="flex-1 truncate px-4 py-2 text-sm">
+                                <a href="#" class="rounded-fullfont-medium text-gray-900 hover:text-gray-600">Find Partner</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-span-1 flex rounded-md shadow-sm">
+                        <div class="flex items-center justify-between truncate rounded-lg border-gray-200 hover:bg-gray-300">
+                            <div class="flex-1 truncate px-4 py-2 text-sm">
+                                <a href="#" class="rounded-fullfont-medium text-gray-900 hover:text-gray-600">Study Groups</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Partner/team choice ends here -->
+        </div>
+    </nav>
+<!-- Content starts here -->
+<div>
+    
+    <ul class="p-4 mx-auto mt-10 max-w-7xl ">
+        <!-- Element 1 starts here -->
+        <li class="relative mt-5 pb-14 border-b-2 border-gray-500">
+            <div class="min-w-0 flex-1 mb-3">
+                <a href="#" class="focus:outline-none">
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    <p class="text-lg font-medium text-gray-900">Beiqi Wang</p>
+                    <p class="truncate text-sm text-gray-500">Senior, CS and Philosophy</p>
+                </a>
+            </div>
+            <!-- Element 1: profile starts -->
+            <ul class="flex overflow-x-scroll space-x-4">
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+            </ul>
+            <!-- Element 1: profile ends -->
+            <!-- Element 1: questions begins -->
+            <ul class="mt-8 space-y-4">
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Self-summery:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Hi! I'm a senior studying CS and Philo at UC berkely. Looking for CS 10 partners to do group project with!</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Some Classes that I enjoy at Berekely: 
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+            </ul>
+            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                </svg>
+                </button>
+            </div>
+
+            <!-- Element 1: questions end -->
+
+        </li>
+        <!-- Element 1 ends here -->
+
+        <!-- more elements -->
+        <li class="relative mt-5 pb-14 border-b-2 border-gray-500">
+            <div class="min-w-0 flex-1 mb-3">
+                <a href="#" class="focus:outline-none">
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    <p class="text-lg font-medium text-gray-900">Beiqi Wang</p>
+                    <p class="truncate text-sm text-gray-500">Senior, CS and Philosophy</p>
+                </a>
+            </div>
+            <!-- Element 1: profile starts -->
+            <ul class="flex overflow-x-scroll space-x-4">
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+                <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                        alt="">
+                </li>
+            </ul>
+            <!-- Element 1: profile ends -->
+            <!-- Element 1: questions begins -->
+            <ul class="mt-8 space-y-4">
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Self-summery:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Hi! I'm a senior studying CS and Philo at UC berkely. Looking for CS 10
+                        partners to do group project with!</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+            </ul>
+            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+            </div>
+        
+            <!-- Element 1: questions end -->
+        
+        </li>
+    </ul>
+
+</div>
+
+<!-- Content ends here -->
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+

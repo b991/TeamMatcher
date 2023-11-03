@@ -23,10 +23,8 @@ class User(UserMixin, db.Model):
     projects = db.Column(db.String, nullable=True)
     fav_class = db.Column(db.String, nullable=True)
     class_taken = db.Column(db.String, nullable=True)
-    goal = db.Column(db.String, nullable=True)
     fear = db.Column(db.String, nullable=True)
     weekend = db.Column(db.String, nullable=True)
-    expertise = db.Column(db.String, nullable=True)
     highlight = db.Column(db.String, nullable=True)
     lookfor = db.Column(db.String, nullable=True)
     skill = db.Column(db.String, nullable=True)
@@ -145,10 +143,8 @@ def profile():
                            email=user.email,
                            fav_class=user.fav_class if user.fav_class is not None else " ",
                            class_taken=user.class_taken if user.class_taken is not None else " ",
-                           goal=user.goal if user.goal is not None else " ",
                            fear=user.fear if user.fear is not None else " ",
                            weekend=user.weekend if user.weekend is not None else " ",
-                           expertise=user.expertise if user.expertise is not None else " ",
                            highlight=user.highlight if user.highlight is not None else " ",
                            lookfor=user.lookfor if user.lookfor is not None else " ",
                            skill=user.skill if user.skill is not None else " ",
@@ -225,7 +221,7 @@ def logout():
 def profileQ():
     user = current_user
     if request.method == "POST":
-        fields = ["goal", "fear", "weekend", "expertise", "highlight",
+        fields = ["fear", "weekend", "highlight",
                   "lookfor", "skill", "connect", "weakness", "hobby"]
         for field in fields:
             val = request.form.get(field)
@@ -234,10 +230,8 @@ def profileQ():
         db.session.commit()
         return redirect("/profile")
     return render_template("profileQ.html",
-                           goal=user.goal if user.goal is not None else " ",
                            fear=user.fear if user.fear is not None else " ",
                            weekend=user.weekend if user.weekend is not None else " ",
-                           expertise=user.expertise if user.expertise is not None else " ",
                            highlight=user.highlight if user.highlight is not None else " ",
                            lookfor=user.lookfor if user.lookfor is not None else " ",
                            skill=user.skill if user.skill is not None else " ",
@@ -274,6 +268,19 @@ def browse():
                            names=names,
                            descriptions=descriptions,
                            creators=creators)
+
+
+# update on Nov 2
+@match_app.route('/dashboard', methods=['GET'])
+def dashboard():
+    return render_template("dashboard.html")
+
+@match_app.route('/grid', methods=['GET'])
+def grid():
+    return render_template("grid.html")
+
+
+
 
 @login_manager.unauthorized_handler
 def unauthorized_callback():
