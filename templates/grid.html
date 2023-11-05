@@ -10,7 +10,7 @@
         href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3Ctext%20x='0'%20y='14'%3E🎉%3C/text%3E%3C/svg%3E"
         type="image/svg+xml" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="/static/javascript/script.js" defer></script>
 
 </head>
 
@@ -35,9 +35,18 @@
                             class="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Post</a>
                     </div>
                 </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <a href="/profile"
-                        class="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Me</a>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                        class="w-5 h-5 cursor-pointer stroke-yellow-600">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                    </svg>
+                    <a href="/profile" class="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm text-center font-medium">Me</a>
                 </div>
             </div>
             <!-- Partner/team choice starts here   -->
@@ -67,17 +76,23 @@
 <div>
     <ul class="p-4 mx-auto mt-10 max-w-7xl h-screen space-y-28">
         <!-- Element 1 starts here -->
-        <li class="relative mt-20 border-b-2 border-gray-500 h-3/5">
-            <div class="absolute -top-16 w-full">
-                <div class="flex justify-between w-full">
-                    <div class="min-w-0 flex-1">
-                        <a href="#" class="focus:outline-none">
-                            <span class="absolute inset-0" aria-hidden="true"></span>
-                            <p class="font-semibold text-gray-900">Beiqi Wang</p>
-                            <p class="truncate text-sm text-gray-500">Senior, CS and Philosophy</p>
-                        </a>
-                    </div>
-                    <button class="bg-blue-500 text-white px-2 rounded-full flex items-center">
+        <li class="relative mt-20 border-b-2 border-gray-500 pb-20">
+            <!-- Element 1: profile header starts -->
+            <div class="flex justify-between w-full mb-3">
+                <div class="min-w-0 flex-1">
+                    <a href="#" class="focus:outline-none">
+                        <p class="font-semibold text-gray-900">Beiqi Wang</p>
+                        <p class="text-sm text-gray-500">Senior, CS and Philosophy</p>
+                    </a>
+                </div>
+                <div class = "flex items-center space-x-4">
+                    <a class="cursor-pointer">
+                        <svg onclick=" Change_star_icon(this) " iewBox="0 0 24 24" class="w-6 h-6 fill-none stroke-[1.5] stroke-yellow-600">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+                    </a>
+                    <button class="bg-blue-500 text-white px-2 py-2 rounded-full flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                             class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -86,9 +101,12 @@
                         <p class="ml-2 text-sm">
                             Message
                         </p>
-                    </button>
+                    </button>                        
                 </div>
+
             </div>
+            <!-- Element 1: profile header ends -->
+
             <!-- Element 1: profile starts -->
                 <ul class="flex overflow-auto space-x-4 scrollbar">
                     <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
@@ -121,6 +139,7 @@
                     </li>
                 </ul>     
             <!-- Element 1: profile ends -->
+
             <!-- Element 1: questions begins -->
             <ul class="space-y-4">
                 <li>
@@ -149,7 +168,72 @@
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
                 </li>
             </ul>
-            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+            <ul id="hidden_list" class="mt-4 space-y-4 hidden">
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>  
+            </ul>
+            <div id="expand_down" class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
                 <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                     class="w-5 h-5">
@@ -157,23 +241,38 @@
                 </svg>
                 </button>
             </div>
+            <div id="expand_up" class="hidden absolute bottom-5 left-1/2 transform -translate-x-1/2">
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+                    </svg>
+                    </svg>
+                </button>
+            </div>
             <!-- Element 1: questions end -->
-
         </li>
         <!-- Element 1 ends here -->
 
         <!-- more elements -->
-        <li class="relative mt-20 border-b-2 border-gray-500 h-3/5">
-            <div class="absolute -top-16 w-full">
-                <div class="flex justify-between w-full">
-                    <div class="min-w-0 flex-1">
-                        <a href="#" class="focus:outline-none">
-                            <span class="absolute inset-0" aria-hidden="true"></span>
-                            <p class="font-semibold text-gray-900">Beiqi Wang</p>
-                            <p class="truncate text-sm text-gray-500">Senior, CS and Philosophy</p>
-                        </a>
-                    </div>
-                    <button class="bg-blue-500 text-white px-2 rounded-full flex items-center">
+        <li class="relative mt-20 border-b-2 border-gray-500 pb-20">
+            <!-- Element 1: profile header starts -->
+            <div class="flex justify-between w-full mb-3">
+                <div class="min-w-0 flex-1">
+                    <a href="#" class="focus:outline-none">
+                        <p class="font-semibold text-gray-900">Beiqi Wang</p>
+                        <p class="text-sm text-gray-500">Senior, CS and Philosophy</p>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a  class="cursor-pointer">
+                        <svg onclick=" Change_star_icon(this) " iewBox="0 0 24 24"
+                            class="w-6 h-6 fill-none stroke-[1.5] stroke-yellow-600">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+                    </a>
+                    <button class="bg-blue-500 text-white px-2 py-2 rounded-full flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -184,7 +283,10 @@
                         </p>
                     </button>
                 </div>
+        
             </div>
+            <!-- Element 1: profile header ends -->
+        
             <!-- Element 1: profile starts -->
             <ul class="flex overflow-auto space-x-4 scrollbar">
                 <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
@@ -217,6 +319,7 @@
                 </li>
             </ul>
             <!-- Element 1: profile ends -->
+        
             <!-- Element 1: questions begins -->
             <ul class="space-y-4">
                 <li>
@@ -246,7 +349,72 @@
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
                 </li>
             </ul>
-            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+            <ul id="hidden_list" class="mt-4 space-y-4 hidden">
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+            </ul>
+            <div id="expand_down" class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
                 <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-5 h-5">
@@ -255,20 +423,36 @@
                     </svg>
                 </button>
             </div>
+            <div id="expand_up" class="hidden absolute bottom-5 left-1/2 transform -translate-x-1/2">
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+                    </svg>
+                    </svg>
+                </button>
+            </div>
             <!-- Element 1: questions end -->
-        
         </li>
-        <li class="relative mt-20 border-b-2 border-gray-500 h-3/5">
-            <div class="absolute -top-16 w-full">
-                <div class="flex justify-between w-full">
-                    <div class="min-w-0 flex-1">
-                        <a href="#" class="focus:outline-none">
-                            <span class="absolute inset-0" aria-hidden="true"></span>
-                            <p class="font-semibold text-gray-900">Beiqi Wang</p>
-                            <p class="truncate text-sm text-gray-500">Senior, CS and Philosophy</p>
-                        </a>
-                    </div>
-                    <button class="bg-blue-500 text-white px-2 rounded-full flex items-center">
+        <li class="relative mt-20 border-b-2 border-gray-500 pb-20">
+            <!-- Element 1: profile header starts -->
+            <div class="flex justify-between w-full mb-3">
+                <div class="min-w-0 flex-1">
+                    <a href="#" class="focus:outline-none">
+                        <p class="font-semibold text-gray-900">Beiqi Wang</p>
+                        <p class="text-sm text-gray-500">Senior, CS and Philosophy</p>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a class="cursor-pointer">
+                        <svg onclick=" Change_star_icon(this) " iewBox="0 0 24 24"
+                            class="w-6 h-6 fill-none stroke-[1.5] stroke-yellow-600">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+                    </a>
+                    <button class="bg-blue-500 text-white px-2 py-2 rounded-full flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -279,7 +463,10 @@
                         </p>
                     </button>
                 </div>
+        
             </div>
+            <!-- Element 1: profile header ends -->
+        
             <!-- Element 1: profile starts -->
             <ul class="flex overflow-auto space-x-4 scrollbar">
                 <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
@@ -312,6 +499,7 @@
                 </li>
             </ul>
             <!-- Element 1: profile ends -->
+        
             <!-- Element 1: questions begins -->
             <ul class="space-y-4">
                 <li>
@@ -341,7 +529,72 @@
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
                 </li>
             </ul>
-            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+            <ul id="hidden_list" class="mt-4 space-y-4 hidden">
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            Some Classes that I enjoy at Berekely:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+            </ul>
+            <div id="expand_down" class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
                 <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-5 h-5">
@@ -350,11 +603,20 @@
                     </svg>
                 </button>
             </div>
+            <div id="expand_up" class="hidden absolute bottom-5 left-1/2 transform -translate-x-1/2">
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+                    </svg>
+                    </svg>
+                </button>
+            </div>
             <!-- Element 1: questions end -->
-        
         </li>
-    </ul>
 
+    </ul>
 </div>
 
 <!-- Content ends here -->
@@ -364,7 +626,6 @@
             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
         </div>
     </div>
-
 </body>
 
 

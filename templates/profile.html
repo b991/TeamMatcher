@@ -7,8 +7,41 @@
 
 
 {% block body %}
+
     <div class="container max-w-7xl mx-auto">
-       <div class="flex flex-col items-center mt-6">
+        <!-- profile pic starts -->
+        <ul class="flex overflow-x-scroll space-x-4 scrollbar mt-10">
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+            <li class="w-64 h-64 bg-cover bg-center rounded-md flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    alt="">
+            </li>
+        </ul>
+        <!-- profile pic ends -->
+       <div class="flex flex-col items-center">
            <h1 class="text-3xl mt-10">{{ first_name }} {{ last_name }}</h1>
            <a href="/profileProjects?id={{ user_id }}" class="my-5 shadow-lg bg-green-100 text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">View {{first_name}}'s Projects</a>
            <div class="flex">
