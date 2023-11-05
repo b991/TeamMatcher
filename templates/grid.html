@@ -74,9 +74,10 @@
     </nav>
 <!-- Content starts here -->
 <div>
-    <ul class="p-4 mx-auto mt-10 max-w-7xl h-screen space-y-28">
+    
+    <ul class="p-4 mx-auto mt-10 max-w-7xl space-y-28">
         <!-- Element 1 starts here -->
-        <li class="relative mt-20 border-b-2 border-gray-500 pb-20">
+        <li class="relative mt-20 border-b-2 border-gray-500 bg-red-50 h-fit pb-20">
             <!-- Element 1: profile header starts -->
             <div class="flex justify-between w-full mb-3">
                 <div class="min-w-0 flex-1">
@@ -167,8 +168,17 @@
                     </h3>
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
                 </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            My github link: 
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> https://github.com/b991</p>
+                </li>
             </ul>
-            <ul id="hidden_list" class="mt-4 space-y-4 hidden">
+            <ul id="hidden_list" class="collapse mt-4 space-y-4 ">
                 <li>
                     <h3 class="text-base font-semibold text-gray-900">
                         <a href="#" class="focus:outline-none">
@@ -233,7 +243,7 @@
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
                 </li>  
             </ul>
-            <div id="expand_down" class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+            <div id="expand_down" class=" absolute bottom-5 left-1/2 transform -translate-x-1/2">
                 <button class="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                     class="w-5 h-5">
@@ -253,7 +263,6 @@
             <!-- Element 1: questions end -->
         </li>
         <!-- Element 1 ends here -->
-
         <!-- more elements -->
         <li class="relative mt-20 border-b-2 border-gray-500 pb-20">
             <!-- Element 1: profile header starts -->
@@ -265,7 +274,7 @@
                     </a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a  class="cursor-pointer">
+                    <a class="cursor-pointer">
                         <svg onclick=" Change_star_icon(this) " iewBox="0 0 24 24"
                             class="w-6 h-6 fill-none stroke-[1.5] stroke-yellow-600">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -347,6 +356,15 @@
                         </a>
                     </h3>
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
+                </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            My github link:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> https://github.com/b991</p>
                 </li>
             </ul>
             <ul id="hidden_list" class="mt-4 space-y-4 hidden">
@@ -528,6 +546,15 @@
                     </h3>
                     <p class="text-sm text-gray-500"> Shakespear, Chinese, CS 61B and CS 61C</p>
                 </li>
+                <li>
+                    <h3 class="text-base font-semibold text-gray-900">
+                        <a href="#" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            My github link:
+                        </a>
+                    </h3>
+                    <p class="text-sm text-gray-500"> https://github.com/b991</p>
+                </li>
             </ul>
             <ul id="hidden_list" class="mt-4 space-y-4 hidden">
                 <li>
@@ -615,7 +642,6 @@
             </div>
             <!-- Element 1: questions end -->
         </li>
-
     </ul>
 </div>
 
