@@ -262,7 +262,7 @@ def browse():
             creator = User.query.filter_by(id=project.created_by).first()
             creators.append("{} {}".format(creator.first_name, creator.last_name))
 
-    return render_template("home.html",
+    return render_template("grid.html",
                            num_projects=num_projects,
                            ids=ids,
                            names=names,

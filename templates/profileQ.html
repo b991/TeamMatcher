@@ -9,77 +9,97 @@ Team Matcher | Profile Questions
     <div class="flex flex-col items-center mt-6">
         <h1 class="text-3xl mt-10">More about Me</h1>
     </div>
-    <form action="/profileQ" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div class="sm:col-span-2">
-                <label for="fear" class="block text-sm font-semibold leading-6 text-gray-900">My most irrational
-                    fear:</label>
-                <div class="mt-2.5">
-                    <input type="fear" name="fear" id="fear" placeholder="{{ fear }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+    <form action="/profileQ" method="POST" class="mx-auto max-w-4xl container mt-10">
+            <!-- Start: questions -->
+            <div class="grid grid-cols-1 gap-10">
+                <div class="rounded-lg bg-blue-100 divide-y-2 divide-solid divide-gray-400 shadow-lg">
+                    <div class="py-3">
+                        <div class="mt-2 flex justify-between items-center px-4">
+                            <div>
+                                <p class="block text-xs text-xstext-gray-900 pb-1">ABOUT ME</p>
+                                <p class="text-lg">Self-summery</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <input type="text" name="goal" id="goal" placeholder="{{about_me}}" class="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="rounded-lg bg-green-100 divide-y-2 divide-solid divide-gray-400 shadow-lg">
+                    <div class="py-3">
+                        <div class="mt-2 flex justify-between items-center px-4">
+                            <div>
+                                <p class="block text-xs text-xstext-gray-900 pb-1">ACADEMIC</p>
+                                <p class="text-lg">Some Classes that I enjoy at Berekely</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <input type="text" name="goal" id="goal" placeholder="{{academic}}"
+                            class="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="rounded-lg bg-yellow-100 divide-y-2 divide-solid divide-gray-400 shadow-lg">
+                    <div class="py-3">
+                        <div class="mt-2 flex justify-between items-center px-4">
+                            <div>
+                                <p class="block text-xs text-xstext-gray-900 pb-1">GITHUB</p>
+                                <p class="text-lg">My github link</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <input type="text" name="goal" id="goal" placeholder="{{github}}"
+                            class="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="rounded-lg bg-red-100 divide-y-2 divide-solid divide-gray-400 shadow-lg">
+                    <div class="py-3">
+                        <div class="mt-2 flex justify-between items-center px-4">
+                            <div>
+                                <p class="block text-xs text-xstext-gray-900 pb-1">GOAL</p>
+                                <p class="text-lg">What I'm doing with my life</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <input type="text" name="goal" id="goal" placeholder="{{goal}}"
+                            class="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="rounded-lg bg-purple-100 divide-y-2 divide-solid divide-gray-400 shadow-lg">
+                    <div class="py-3">
+                        <div class="mt-2 flex justify-between items-center px-4">
+                            <div>
+                                <p class="block text-xs text-xstext-gray-900 pb-1">HOBBIES</p>
+                                <p class="text-lg">The last show I binged</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <input type="text" name="goal" id="goal" placeholder="{{hobbies}}"
+                            class="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+                <div class="rounded-lg bg-pink-100 divide-y-2 divide-solid divide-gray-400 shadow-lg">
+                    <div class="py-3">
+                        <div class="mt-2 flex justify-between items-center px-4">
+                            <div>
+                                <p class="block text-xs text-xstext-gray-900 pb-1">MOMENTS</p>
+                                <p class="text-lg">A perfect day for me is</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <input type="text" name="goal" id="goal" placeholder="{{moments}}"
+                            class="block w-full bg-transparent rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    </div>
                 </div>
             </div>
-            <div class="sm:col-span-2">
-                <label for="weekend" class="block text-sm font-semibold leading-6 text-gray-900">Typical Sunday:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="weekend" id="weekend" placeholder="{{ weekend }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="highlight" class="block text-sm font-semibold leading-6 text-gray-900">The one thing you
-                    should know about me is:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="highlight" id="highlight" placeholder="{{ highlight }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="lookfor" class="block text-sm font-semibold leading-6 text-gray-900">I'm looking
-                    for:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="lookfor" id="lookfor" placeholder="{{ lookfor }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="skill" class="block text-sm font-semibold leading-6 text-gray-900">I bet you
-                    can't:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="skill" id="skill" placeholder="{{ skill }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="connect" class="block text-sm font-semibold leading-6 text-gray-900">You should leave a
-                    comment if:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="connect" id="connect" placeholder="{{ connect }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="weakness" class="block text-sm font-semibold leading-6 text-gray-900">Don't hate me if
-                    I:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="weakness" id="weakness" placeholder="{{ weakness }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="hobby" class="block text-sm font-semibold leading-6 text-gray-900">To me, relaxation
-                    is:</label>
-                <div class="mt-2.5">
-                    <input type="text" name="hobby" id="hobby" placeholder="{{ hobby }}"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
-            </div>
-
-        </div>
-        <div class="mt-5 mb-10">
+            <!-- End: questions-->
+        <div class="mt-10 mb-10">
             <button type="submit"
-                class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Let's
-                talk</button>
+                class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
         </div>
     </form>
 </div>
